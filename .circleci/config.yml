@@ -4,6 +4,6 @@ jobs:
    machine: true
    steps:
      - checkout
-     - run: docker login --username DOCKER_USER --password $DOCKER_PASS
+     - run: docker login --username $DOCKER_USER --password $DOCKER_PASS
      - run: docker build -t .
      - run: docker push chfanghr/cpp-dev:latest     
