@@ -2,7 +2,7 @@ FROM phusion/baseimage:latest
 
 CMD ["/sbin/my_init"]
 
-RUN curl "https://gitee.com/Fanghr/codes/hlijsbv2z710rmo9tn4d328/raw?blob_name=gistfile2.txt" > /etc/apt/sources.list
+# RUN curl "https://gitee.com/Fanghr/codes/hlijsbv2z710rmo9tn4d328/raw?blob_name=gistfile2.txt" > /etc/apt/sources.list
 
 RUN apt -y update&& apt -y upgrade&& apt -y install
 
