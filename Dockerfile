@@ -6,7 +6,7 @@ CMD ["/sbin/my_init"]
 
 RUN apt -y update&& apt -y upgrade&& apt -y install
 
-RUN apt -y install cmake make git 
+RUN apt -y install cmake make git xz-utils
 
 RUN curl "http://releases.llvm.org/8.0.0/clang+llvm-8.0.0-x86_64-linux-gnu-ubuntu-16.04.tar.xz" --output clang.tar.xz &&\
     tar -C /usr/local -xf clang.tar.xz && rm -f clang.tar.xz
