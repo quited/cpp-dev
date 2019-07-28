@@ -12,7 +12,7 @@ RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 RUN curl "http://releases.llvm.org/8.0.0/clang+llvm-8.0.0-x86_64-linux-gnu-ubuntu-16.04.tar.xz" --output clang.tar.xz &&\
     tar -xf clang.tar.xz && \
-    mv clang+llvm-8.0.0-x86_64-linux-gnu-ubuntu-16.04/* /usr/local &&\
+    cp-r clang+llvm-8.0.0-x86_64-linux-gnu-ubuntu-16.04/* /usr/local &&\
     rm -f clang.tar.xz&&rm -rf clang+llvm-8.0.0-x86_64-linux-gnu-ubuntu-16.04
 
 RUN rm -rf /etc/service/sshd/down
